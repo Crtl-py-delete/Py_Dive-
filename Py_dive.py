@@ -5,7 +5,7 @@ Created on Sun Mar 17 17:09:16 2024
 @author: mvdhe
 
 PRESS ESCAPE TO STOP A GAME
-Vergeet ook niet de pynput te installeren met pip
+Do not forget to install pynput first with PIP.
 """
 from random import randint
 from time import sleep
@@ -22,6 +22,7 @@ def empty_plot():
       
     #clear and up
     print("\033[H \033[2J")
+    #Daytime, blue
     print("\x1b[1;34m")
     
 def led_toggle(target_x, target_y, player_pos):
@@ -77,7 +78,7 @@ if __name__ == '__main__':
     #Audio
     #from musicalbeeps import Player
     import musicalbeeps
-    player = musicalbeeps.Player(volume = 0.3, mute_output = True) #Maak hiermee geluiden voor je spel
+    player = musicalbeeps.Player(volume = 0.3, mute_output = True) #This instance makes the sounds.
     
     'parameters, variabelen'
     # Initialize player position
@@ -123,4 +124,5 @@ if __name__ == '__main__':
         #my name is bond, james bond
         print(letter, end= '')
     sleep(1.5)
+
     
